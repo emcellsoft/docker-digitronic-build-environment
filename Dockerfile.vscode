@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:debian-9
 RUN dpkg --add-architecture i386 && \
     apt-get update && \
     apt-get install -y locales-all net-tools tcpdump python-pip make gdb gdbserver vim-common wget git bzip2 build-essential libstdc++5:i386 wine wine32 procps openjdk-8-jre zip && \
-    pip install compiledb
+    pip install compiledb  && \
     mkdir -p /root/tmp && cd /root/tmp && \
     wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/5_3-2016q1/gccarmnoneeabi532016q120160330linuxtar.bz2 && \
     tar -xjf gccarmnoneeabi532016q120160330linuxtar.bz2 && \
