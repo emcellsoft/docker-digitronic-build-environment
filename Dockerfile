@@ -1,8 +1,8 @@
-FROM debian:stretch
+FROM debian:buster
 
 RUN dpkg --add-architecture i386 && \
     apt-get update && \
-    apt-get install -y make gdb gdbserver vim-common wget git bzip2 build-essential libstdc++5:i386 wine wine32 procps openjdk-8-jre zip && \
+    apt-get install -y make gdb gdbserver vim-common wget git bzip2 build-essential libstdc++5:i386 wine wine32 procps openjdk-11-jre zip && \
     mkdir -p /root/tmp && cd /root/tmp && \
     wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/5_3-2016q1/gccarmnoneeabi532016q120160330linuxtar.bz2 && \
     tar -xjf gccarmnoneeabi532016q120160330linuxtar.bz2 && \
